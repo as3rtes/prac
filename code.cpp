@@ -2,8 +2,17 @@
 using namespace std;
 
 int main() {
-    int arr[] = {33,45,23,944,1, 82};
-    int size = 6;
+    int size;
+
+    cout << "Enter size: ";
+    cin >> size;
+
+    int* arr = new int[size];
+
+    cout << "Enter elements:" << endl;
+    for (int i = 0; i < size; i++) {
+        cin >> arr[i];
+    }
 
     int max = arr[0];
     for (int i = 1; i < size; i++) {
@@ -11,6 +20,9 @@ int main() {
             max = arr[i];
         }
     }
+
     cout << "Max: " << max << endl;
+
+
     return 0;
 }
